@@ -1,0 +1,9 @@
+# Nothing Special #
+
+## About ##
+This is a very simple pong/style game written as an exercise in cross platform programming.
+
+Authored in [Code::Blocks][http://www.codeblocks.org/] using [Allegro 5][http://alleg.sourceforge.net/].
+
+## License ##
+Released under the terms of the GNU Public License 3.0. If you have questions or need something else, feel free to email me.
