@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Nothing Special" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Nothing Special" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/local/lib/liballegro.so" />
+					<Add library="/usr/local/lib/liballegro_acodec.so" />
+					<Add library="/usr/local/lib/liballegro_audio.so" />
+					<Add library="/usr/local/lib/liballegro_color.so" />
+					<Add library="/usr/local/lib/liballegro_dialog.so" />
+					<Add library="/usr/local/lib/liballegro_font.so" />
+					<Add library="/usr/local/lib/liballegro_image.so" />
+					<Add library="/usr/local/lib/liballegro_main.so" />
+					<Add library="/usr/local/lib/liballegro_memfile.so" />
+					<Add library="/usr/local/lib/liballegro_physfs.so" />
+					<Add library="/usr/local/lib/liballegro_primitives.so" />
+					<Add library="/usr/local/lib/liballegro_ttf.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Nothing Special" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add library="/usr/local/lib/liballegro_acodec-static.a" />
+					<Add library="/usr/local/lib/liballegro_audio-static.a" />
+					<Add library="/usr/local/lib/liballegro_color-static.a" />
+					<Add library="/usr/local/lib/liballegro_dialog-static.a" />
+					<Add library="/usr/local/lib/liballegro_font-static.a" />
+					<Add library="/usr/local/lib/liballegro_image-static.a" />
+					<Add library="/usr/local/lib/liballegro_main-static.a" />
+					<Add library="/usr/local/lib/liballegro_memfile-static.a" />
+					<Add library="/usr/local/lib/liballegro_physfs-static.a" />
+					<Add library="/usr/local/lib/liballegro_primitives-static.a" />
+					<Add library="/usr/local/lib/liballegro-static.a" />
+					<Add library="/usr/local/lib/liballegro_ttf-static.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="assets/8bitlim.ttf" />
+		<Unit filename="assets/title.png" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
