@@ -112,7 +112,12 @@ int main(int argc, char **argv)
     smallfont = al_load_font("assets/fonts/Geo-Regular.ttf", 24, 0);
     medfont = al_load_font("assets/fonts/Geo-Regular.ttf", 38, 0);
     hugefont = al_load_font("assets/fonts/Geo-Regular.ttf", 70, 0);
-
+	if(!smallfont || !medfont || !hugefont) {
+		fprintf(stderr, "Failed to load fonts!\n");
+        al_destroy_display(display);
+        al_destroy_timer(timer);
+        return -1;
+    }
     // initialize audio, just WAVs
     if(!al_install_audio()) {
         fprintf(stderr, "Failed to initialize audio!\n");
@@ -243,6 +248,8 @@ int main(int argc, char **argv)
     else {
         high_score = 0;
     }
+	final_score = 0;
+
     sprintf(hightxt, "High: %d", high_score);
     al_fclose(scoref);
 
@@ -593,12 +600,13 @@ int main(int argc, char **argv)
         al_fputs(scoref, hightxt);
         al_fclose(scoref);
     }
+
+	// proper cleanup is important!
     al_destroy_bitmap(title);
     al_destroy_bitmap(ball);
     al_destroy_bitmap(paddle);
     al_destroy_timer(timer);
     al_destroy_display(display);
     al_destroy_event_queue(event_queue);
-
    return 0;
 }
